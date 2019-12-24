@@ -35,9 +35,8 @@ func main() {
         })
     })
 
-    r.GET("/ping", func(c *gin.Context) {
-        c.Set("resp", gin.H{"message": "pong111"})
-        c.JSON(http.StatusOK, gin.H{"message": "pong", "status": http.StatusOK})
+    r.GET("/", func(c *gin.Context) {
+        c.String(http.StatusOK,"%s","pong")
     })
 
     s := &http.Server{
