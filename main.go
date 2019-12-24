@@ -23,8 +23,7 @@ func main() {
 
 
     r := gin.Default()
-
-    gin.Logger()
+    gin.SetMode(gin.DebugMode)
     // r.Use(middleware.AccessLog())
 
     // 加载模板
