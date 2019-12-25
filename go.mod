@@ -1,4 +1,4 @@
-module micro-kernel
+module micro
 
 go 1.13
 

@@ -29,14 +29,14 @@ func main() {
     // 加载模板
     r.LoadHTMLGlob("app/template/**/*")
     r.Delims("{{", "}}")
-    r.GET("/posts/index", func(c *gin.Context) {
+    r.GET("/posts-index", func(c *gin.Context) {
         c.HTML(http.StatusOK, "post/index.html", gin.H{
             "title": "Posts",
         })
     })
 
     r.GET("/", func(c *gin.Context) {
-        c.String(http.StatusOK,"%s","pong")
+        c.String(http.StatusOK,"%s","hello")
     })
 
     s := &http.Server{
